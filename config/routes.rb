@@ -12,11 +12,11 @@ Depot::Application.routes.draw do
     get :who_bought, :on => :member
   end
 
-  scope '(:locale)' do
+ scope '(:locale)' do
     resources :orders
     resources :line_items
     resources :carts
-    root :to =>'store#index', :as =>'store'
+    root :to => 'store#index', :as =>'store'
   end
 
 
